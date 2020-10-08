@@ -26,8 +26,11 @@ export default class App {
 			`<table>
 				<thead>
 					<tr>
+						<td></td>
 						<td>Name</td>
-						<td>Price</td>
+						<td>Old Price</td>
+						<td>Discounted Price</td>
+						<td>Discount(%)</td>
 					</tr>
 				</thead>
 				<tbody></tbody>
@@ -46,9 +49,14 @@ export default class App {
 		items.forEach(item => {
 			tableBody.insertAdjacentHTML(
 				'beforeend',
-				`<tr data-name=${item.name} data-price='${item.price}'><td>${
+				`<tr data-name=${item.name} data-price='${item.price.actual}'>
+				<td><img src='${item.image}'/></td>
+				<td>${
 					item.name
-				}</td><td>${parseInt(item.price).toFixed(2)}</td></tr>`
+				}</td><td>${parseInt(item.price.display).toFixed(2)}</td>
+				<td>${parseInt(item.price.actual).toFixed(2)}</td>
+				<td>${parseInt(item.discount).toFixed(2)}</td>
+				</tr>`
 			);
 		});
 	};

@@ -11,6 +11,9 @@ body {
 		border: 1px solid #ddd;
 		padding: 8px;
 	}
+	img {
+		width: 40px;
+	}
 
 	tr {
 		&:nth-child(even) {
