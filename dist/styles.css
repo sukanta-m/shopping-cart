@@ -1,0 +1,45 @@
+body {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; }
+
+#items-table {
+  border-collapse: collapse;
+  width: 100%; }
+  #items-table td,
+  #items-table th {
+    border: 1px solid #ddd;
+    padding: 8px; }
+  #items-table tr:nth-child(even) {
+    background-color: #f2f2f2; }
+  #items-table tr:hover {
+    background-color: #ddd; }
+  #items-table thead tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: white; }
+
+#cart #cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+#cart #total-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  border-top: 2px solid black; }
+
+#cart #cart-rows .cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0; }
+  #cart #cart-rows .cart-row:nth-child(odd) {
+    background-color: #f2f2f2; }
+  #cart #cart-rows .cart-row:nth-child(1) {
+    border-top: 2px solid black; }
+  #cart #cart-rows .cart-row div {
+    flex-basis: 25%; }
+
